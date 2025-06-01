@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Your Genetic Code</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #00ffcc;
+            --secondary: #ff00ff;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --accent: #ffaa00;
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            cursor: crosshair;
+        }
+        
+        /* Cosmic background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 100%);
+            z-index: -2;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        /* DNA Helix Animation */
+        .dna-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 400px;
+            opacity: 0.1;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .dna-strand {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        .dna-pair {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, transparent 45%, transparent 55%, var(--secondary) 100%);
+            border-radius: 2px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2rem, 8vw, 6rem);
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            0% { filter: brightness(1) drop-shadow(0 0 20px rgba(0, 255, 204, 0.5)); }
+            100% { filter: brightness(1.2) drop-shadow(0 0 40px rgba(255, 0, 255, 0.8)); }
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+            animation: fadeIn 2s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 0.8; transform: translateY(0); }
+        }
+        
+        .start-journey {
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .start-journey:hover {
+            color: var(--dark);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--primary);
+        }
+        
+        .start-journey::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .start-journey:hover::before {
+            left: 0;
+        }
+        
+        /* Chapter Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav.visible {
+            transform: translateY(0);
+        }
+        
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Content Sections */
+        .content {
+            display: none;
+            min-height: 100vh;
+            padding: 8rem 2rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: contentFade 0.5s ease-out;
+        }
+        
+        .content.active {
+            display: block;
+        }
+        
+        @keyframes contentFade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .chapter {
+            margin-bottom: 4rem;
+        }
+        
+        .chapter h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .chapter h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+        
+        .chapter h3 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent);
+        }
+        
+        .chapter p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .quote {
+            border-left: 3px solid var(--secondary);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--secondary);
+            opacity: 0.8;
+        }
+        
+        /* Interactive Elements */
+        .consciousness-meter {
+            width: 100%;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .consciousness-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 15px;
+            width: 0%;
+            transition: width 2s ease;
+        }
+        
+        .meditation-prompt {
+            background: rgba(0, 255, 204, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .pulse {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .chapter h2 {
+                font-size: 2rem;
+            }
+            
+            .nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="stars"></div>
+    <div class="dna-container">
+        <div class="dna-strand"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#awakening">The Awakening</a></li>
+            <li><a href="#patterns">Breaking Patterns</a></li>
+            <li><a href="#ancient">Ancient Wisdom</a></li>
+            <li><a href="#consciousness">Expanding Consciousness</a></li>
+            <li><a href="#potential">Full Potential</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1>BREAKING YOUR GENETIC CODE</h1>
+        <p class="subtitle">Awaken from the unconscious patterns that bind you</p>
+        <button class="start-journey" onclick="startJourney()">Begin Your Journey</button>
+    </section>
+    
+    <!-- Content Sections -->
+    <section class="content" id="intro">
+        <div class="chapter">
+            <h2>Introduction</h2>
+            <p>You are more than your biology. More than the cultural programming that shapes your daily existence. This book is a guide to breaking free from the unconscious patterns that keep you asleep, trapped in cycles of behavior dictated by hormones, social conditioning, and tribal instincts.</p>
+            
+            <div class="quote">
+                "The first step to freedom is recognizing that you are not free."
+            </div>
+            
+            <p>Throughout human history, there have been those who awakened early—individuals who saw through the veil of everyday consciousness and glimpsed the deeper truths of existence. They understood that most of humanity moves through life in a state of unconscious reaction, driven by forces they neither understand nor control.</p>
+            
+            <div class="consciousness-meter">
+                <div class="consciousness-fill" id="meter"></div>
+            </div>
+            
+            <p>This journey begins with a simple recognition: you have been programmed. Your genes carry ancient instructions. Your culture has installed software in your mind. But you also have something else—the capacity to wake up, to become conscious, to rewrite your own code.</p>
+        </div>
+    </section>
+    
+    <section class="content" id="awakening">
+        <div class="chapter">
+            <h2>The Awakening</h2>
+            <h3>Recognizing the Sleep</h3>
+            <p>Most people live their entire lives without ever truly waking up. They follow scripts written by evolution, society, and circumstance. They chase goals that aren't truly their own, react to stimuli with predetermined responses, and mistake the prison of their conditioning for freedom.</p>
+            
+            <div class="meditation-prompt">
+                <div class="pulse"></div>
+                <p>Take a moment. Breathe. Notice your thoughts. Where do they come from?</p>
+            </div>
+            
+            <p>The awakening begins when you start to question: Why do I want what I want? Why do I fear what I fear? Why do I believe what I believe? These questions are the keys that unlock the cage of unconscious living.</p>
+            
+            <h3>The Moment of Clarity</h3>
+            <p>For some, awakening comes through crisis. For others, through contemplation. Throughout history, many have found it through sacred plants and fungi—technologies of consciousness that temporarily dissolve the barriers between the conscious and unconscious mind.</p>
+            
+            <p>But however it arrives, the awakening shares common features: a sudden recognition of the automaticity of most human behavior, a sense of stepping outside oneself and observing from a new perspective, and an understanding that there is more to existence than the narrow band of reality we typically inhabit.</p>
+        </div>
+    </section>
+    
+    <section class="content" id="patterns">
+        <div class="chapter">
+            <h2>Breaking Patterns</h2>
+            <h3>The Genetic Prison</h3>
+            <p>Your DNA contains instructions that served your ancestors well but may trap you in outdated patterns. The drive for status, the need for tribal belonging, the fear of the unknown—these are all genetic programs running in the background of your consciousness.</p>
+            
+            <div class="quote">
+                "To break your genetic code is not to deny your humanity, but to transcend its limitations."
+            </div>
+            
+            <p>Understanding these patterns is the first step to freedom. When you recognize that your anger, jealousy, or fear are often just chemical signals designed for a world that no longer exists, you can begin to choose different responses.</p>
+            
+            <h3>Cultural Conditioning</h3>
+            <p>Beyond genetics lies another layer of programming: culture. From birth, you've been taught what to value, what to fear, what to strive for. These cultural codes often conflict with both your genetic drives and your highest potential.</p>
+            
+            <p>Breaking free requires a radical honesty about which beliefs serve you and which merely serve the systems that benefit from your unconsciousness. It means questioning everything, especially the things you're not supposed to question.</p>
+        </div>
+    </section>
+    
+    <section class="content" id="ancient">
+        <div class="chapter">
+            <h2>Ancient Wisdom</h2>
+            <h3>The Perennial Philosophy</h3>
+            <p>Across cultures and throughout time, awakened individuals have discovered similar truths. From the mystics of ancient India to the shamans of the Amazon, from the Greek philosophers to the Sufi poets, there runs a common thread of understanding about the nature of consciousness and human potential.</p>
+            
+            <p>This perennial philosophy teaches that ordinary consciousness is but one mode of awareness, that reality is far more fluid and interconnected than it appears, and that human beings have the capacity to access extraordinary states of being.</p>
+            
+            <h3>Sacred Technologies</h3>
+            <p>For millennia, humans have used various technologies to expand consciousness: meditation, breathwork, fasting, dance, and yes, psychedelic plants and fungi. These are not escapes from reality but tools for seeing reality more clearly.</p>
+            
+            <div class="meditation-prompt">
+                <div class="pulse"></div>
+                <p>Ancient wisdom lives not in books but in direct experience. What have you always known but never allowed yourself to acknowledge?</p>
+            </div>
+            
+            <p>The insights gained from these practices consistently point to the same revelations: the interconnectedness of all things, the illusory nature of the separate self, and the vast potential that lies dormant within human consciousness.</p>
+        </div>
+    </section>
+    
+    <section class="content" id="consciousness">
+        <div class="chapter">
+            <h2>Expanding Consciousness</h2>
+            <h3>Beyond the Default Mode</h3>
+            <p>Your brain has a default mode—a standard operating procedure that keeps you functioning but also keeps you limited. Expanding consciousness means learning to shift out of this default mode and access the fuller spectrum of human awareness.</p>
+            
+            <p>This expansion isn't just personal; it's planetary. As more individuals wake up to their true nature and potential, humanity as a whole moves closer to a collective awakening. We begin to see that our individual consciousness is part of a larger web of awareness that encompasses all life.</p>
+            
+            <h3>The Practice of Presence</h3>
+            <p>Consciousness expansion isn't a one-time event but an ongoing practice. It requires cultivating presence—the ability to be fully here, now, aware of what's happening within and around you without the constant commentary of the conditioned mind.</p>
+            
+            <div class="quote">
+                "In presence, the genetic code loosens its grip, and you discover who you really are beneath the programming."
+            </div>
+            
+            <p>This practice transforms everything: how you relate to others, how you navigate challenges, how you create and contribute to the world. It's the foundation for a life lived consciously rather than mechanically.</p>
+        </div>
+    </section>
+    
+    <section class="content" id="potential">
+        <div class="chapter">
+            <h2>Full Potential</h2>
+            <h3>Individual Liberation</h3>
+            <p>When you break free from unconscious patterns, you don't become less human—you become more fully human. You access capacities that were always there but remained dormant under layers of conditioning.</p>
+            
+            <p>Creativity flows more freely. Intuition sharpens. Compassion deepens. You begin to live from a place of authentic choice rather than programmed reaction. This is not about becoming perfect but about becoming real.</p>
+            
+            <h3>Collective Evolution</h3>
+            <p>Your awakening doesn't happen in isolation. As you break your own genetic code, you create ripples that affect everyone around you. You become a living demonstration that another way is possible.</p>
+            
+            <div class="meditation-prompt">
+                <div class="pulse"></div>
+                <p>Imagine humanity awakened. What becomes possible when we all break free from unconscious patterns?</p>
+            </div>
+            
+            <p>This is the ultimate promise of breaking your genetic code: not just personal liberation but the evolution of our species. When enough individuals wake up, humanity itself can transcend its current limitations and step into a future we can barely imagine from our current state of consciousness.</p>
+            
+            <h3>The Journey Continues</h3>
+            <p>This book is not an ending but a beginning. The journey of awakening is ongoing, deepening with each moment of conscious choice, each pattern recognized and released, each glimpse of the vast potential that lies within.</p>
+            
+            <div class="quote">
+                "You are both the prison and the key. The code and the one who breaks it. The sleeper and the awakened one."
+            </div>
+            
+            <p>Welcome to your awakening. Welcome to breaking your genetic code.</p>
+        </div>
+    </section>
+    
+    <script>
+        // Create stars
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Create DNA helix
+        function createDNA() {
+            const dnaStrand = document.querySelector('.dna-strand');
+            for (let i = 0; i < 20; i++) {
+                const pair = document.createElement('div');
+                pair.className = 'dna-pair';
+                pair.style.top = i * 20 + 'px';
+                pair.style.transform = `rotateY(${i * 18}deg) translateZ(50px)`;
+                dnaStrand.appendChild(pair);
+            }
+        }
+        
+        // Start journey function
+        function startJourney() {
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('nav').classList.add('visible');
+            document.getElementById('intro').classList.add('active');
+            
+            // Animate consciousness meter
+            setTimeout(() => {
+                document.getElementById('meter').style.width = '30%';
+            }, 500);
+        }
+        
+        // Navigation
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                
+                // Hide all content sections
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Show target section
+                document.getElementById(targetId).classList.add('active');
+                
+                // Update consciousness meter
+                const meter = document.getElementById('meter');
+                const progress = {
+                    'intro': '30%',
+                    'awakening': '45%',
+                    'patterns': '60%',
+                    'ancient': '75%',
+                    'consciousness': '90%',
+                    'potential': '100%'
+                };
+                meter.style.width = progress[targetId] || '30%';
+            });
+        });
+        
+        // Mouse trail effect
+        document.addEventListener('mousemove', (e) => {
+            const trail = document.createElement('div');
+            trail.style.position = 'fixed';
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            trail.style.width = '10px';
+            trail.style.height = '10px';
+            trail.style.background = 'radial-gradient(circle, rgba(0,255,204,0.5) 0%, transparent 70%)';
+            trail.style.borderRadius = '50%';
+            trail.style.pointerEvents = 'none';
+            trail.style.transition = 'transform 0.5s, opacity 0.5s';
+            document.body.appendChild(trail);
+            
+            setTimeout(() => {
+                trail.style.transform = 'scale(3)';
+                trail.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                trail.remove();
+            }, 500);
+        });
+        
+        // Initialize
+        createStars();
+        createDNA();
+    </script>
+</body>
+</html>
