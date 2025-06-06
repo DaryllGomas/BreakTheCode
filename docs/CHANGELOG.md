@@ -7,17 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Removed 2 wisdom cards from Introduction section: Plato's Republic (380 BCE) and The Emerald Tablet (200 CE)
+- Removed 2 wisdom cards from The Awakening section: Rumi's Poetry (13th century) and Socrates via Plato (5th century BCE)
+- Removed 2 wisdom cards from Breaking Patterns section: Marcus Aurelius - Meditations (170 CE) and Lao Tzu - Tao Te Ching (6th century BCE)
+- Removed 2 wisdom cards from Ancient Wisdom section: Rumi - Sufi Wisdom (13th century) and Ibn Arabi - Unity of Being (12th century)
+- Removed 1 additional wisdom card from Ancient Wisdom section: The Emerald Tablet (200 CE)
+- Removed 2 wisdom cards from Expanding Consciousness section: The Cloud of Unknowing (14th century) and Eckhart Tolle (21st century)
+- Removed 2 wisdom cards from Full Potential section: Ram Dass (20th-21st century) and Alan Watts (20th century)
+- Replaced Bhagavad Gita quote in Breaking Patterns section with Marcus Aurelius - Meditations quote
+- Updated Tao Te Ching quote in Ancient Wisdom section to focus on releasing fixed identity
+- Removed The Emerald Tablet entry from Living Library data structure
+
 ### Added
 - Wisdom Cards feature integrating humanity's greatest texts throughout all chapters
 - CSS styles for beautifully animated wisdom cards with cosmic theme
 - JavaScript data structure containing 28 wisdom texts across 4 time periods
-- 19 wisdom cards integrated across all 6 chapters:
-  - Introduction: Upanishads, Plato's Republic, Emerald Tablet
-  - The Awakening: Dhammapada, Rumi, Socrates/Plato
-  - Breaking Patterns: Bhagavad Gita, Marcus Aurelius, Lao Tzu
-  - Ancient Wisdom: Emerald Tablet, Tao Te Ching, Rumi, Ibn Arabi
-  - Expanding Consciousness: William Blake, Cloud of Unknowing, Eckhart Tolle
-  - Full Potential: Emerson, Ram Dass, Alan Watts
+- 6 wisdom cards integrated across all 6 chapters:
+  - Introduction: Upanishads
+  - The Awakening: Dhammapada
+  - Breaking Patterns: Marcus Aurelius - Meditations
+  - Ancient Wisdom: Tao Te Ching
+  - Expanding Consciousness: William Blake
+  - Full Potential: Emerson
 - Living Library section with interactive features:
   - Grid layout displaying all 28 wisdom texts
   - Period filtering (Ancient, Medieval, Renaissance, Contemporary)
