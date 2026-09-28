@@ -2,7 +2,7 @@
 
 Breaking Your Genetic Code is a static digital companion to the book of the same name. It brings six chapters, a 16-text Living Library, 28 sourced or honestly marked quotations, the Wisdom Web, four study paths, bookmarks, and private reflections into one accessible web experience.
 
-**Live:** https://daryllgomas.github.io/BreakTheCode/ — by [Daryll Gomas](https://daryllgomas.com/).
+**Live:** https://breakthecode.daryllgomas.com/ (mirror: https://breakthecode.meatball-labs.com/) — by [Daryll Gomas](https://daryllgomas.com/).
 
 The site has no framework, dependency install, or build step. It is plain HTML, CSS, JSON, and ES modules; Google Fonts is its only external request.
 
@@ -76,3 +76,7 @@ The check must continue to report 6 chapters, 16 texts, 28 quotes, 19 connection
 ## Design and contribution guidance
 
 The implementation specification lives in `docs/redesign/00-DESIGN-BIBLE.md`, with `docs/redesign/reference/MASTER-mockup.png` as the visual authority. See `AGENTS.md` and `docs/CONTRIBUTING.md` before changing the site.
+
+## Publish
+
+`bash scripts/publish.sh` from a clean `main`: runs the content verifier, then pushes to both homes: `DaryllGomas/BreakTheCode` (breakthecode.daryllgomas.com) and the `Namkuzu-da-OS/BreakTheCode` mirror (breakthecode.meatball-labs.com, served from the `pages-meatball` branch).
