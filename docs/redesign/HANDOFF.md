@@ -1,14 +1,16 @@
 # Handoff — Breaking Your Genetic Code
 
-**Last session:** 2026-09-19 → 2026-09-20
-**State:** Site is **LIVE and complete** at https://breakthecode.meatball-labs.com (`main` @ `cd9ccf9`)
+**Last session:** 2026-09-27
+**State:** Site is **LIVE and public** at https://daryllgomas.github.io/BreakTheCode/ — repo `DaryllGomas/BreakTheCode`, `main` publishes via GitHub Pages. Linked from daryllgomas.com (contact list, "book").
+
+**Moved 2026-09-27** out of the R&D repo (`Namkuzu-da-OS/BreakTheCode`, breakthecode.meatball-labs.com). The old 2025 personal-repo site is archived on branch `archive/v1-2025` + tag `v1-2025-06`, and bundled to Drive at `BigPic - Technology/Website/Backups/BreakTheCode-DaryllGomas-v1-2025-archive-2026-09-27/`.
 **Next session:** pick up at "Where to start" below.
 
 ---
 
 ## Where things stand
 
-The 2.0 redesign is built, verified and deployed. `main` is live at commit `41ce0b9`.
+The 2.0 redesign is built, verified and deployed. `main` is live on `DaryllGomas/BreakTheCode`.
 
 | Piece | State |
 |---|---|
@@ -18,7 +20,7 @@ The 2.0 redesign is built, verified and deployed. `main` is live at commit `41ce
 | `/web/` interactive graph | live |
 | `/practices/`, `/about/` | live |
 | Content preserved | 6 chapters, 16 texts, 28 quotes, 19 connections, 4 paths |
-| Quote sourcing | 23 of 28 verified to a named edition |
+| Quote sourcing | 28 of 28 verified to a named edition (last five replaced 2026-09-27) |
 | Art | all 26 plates generated and wired; every text has a real artefact plate |
 | Old site | preserved at `/legacy/index.html` + backed up to Drive |
 
@@ -26,22 +28,9 @@ The 2.0 redesign is built, verified and deployed. `main` is live at commit `41ce
 
 ## Where to start next session
 
-**1. Nothing is half-finished.** `main` is live and complete; `redesign/temple` is merged into it. Both branches are pushed. The verifier passes with "Approved quote corrections applied: 7".
+**0. Nothing is half-finished. Done 2026-09-27:** `library-09` regenerated as a closed binding (no longer duplicates `library-10`); the five paraphrase quotes replaced with verified same-author lines (see RESEARCH-REPORT addendum). Verifier: "Approved quote corrections applied: 12".
 
-**1. One known visual defect (cosmetic, optional).**
-`assets/art/library-09` (The Cloud of Unknowing) and `library-10` (Ibn Arabi) are near-duplicate compositions — both open codices, same angle, same light. Correct up close, but they read as the same object twice in the library grid. Regenerate `library-09` as a *closed* leather binding so it contrasts. One `image_gen` call with the master mockup as reference.
-
-**2. Five quotes still carry the paraphrase mark, by design.**
-No honest same-meaning replacement exists for these, so they were deliberately left alone:
-
-| Text | Why |
-|---|---|
-| Rumi ×2 | No Persian original or named translation locatable; one has no replacement offered at all |
-| Emerson — "What lies behind us…" | Actually Henry Stanley Haskins, 1940 |
-| Huxley — "doors of perception" | Actually Ray Manzarek, 1967, explaining the band's name |
-| Tao Te Ching — "When I let go of what I am" | Actually John Heider, 1985 |
-
-Options for each: keep with the honest mark (current), re-attribute to the real author, or drop. **This is an owner decision, not a builder one.** Full evidence in `docs/redesign/RESEARCH-REPORT.md`.
+**1. Footer social icons (YouTube / Instagram / X) are still decorative, unlinked** — waiting on the owner's handles.
 
 **3. Mobile is broken at phone width — deferred by the owner, desktop is fine.**
 
@@ -59,7 +48,6 @@ Owner's call 2026-09-20: **desktop-only is acceptable for now.** Do not treat th
 - Mobile QA pass at 390px on the real device
 - Lighthouse run (packet 08's checklist is in `NOTES.md`)
 - Open Graph image for link sharing
-- The `AGENTS.md` rule still says "never commit to `main`" — true during the build, now stale since publishing happens on `main`. Update if an agent gets confused by it.
 
 ---
 
