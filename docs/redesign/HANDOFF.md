@@ -1,9 +1,11 @@
 # Handoff — Breaking Your Genetic Code
 
 **Last session:** 2026-09-27
-**State:** Site is **LIVE and public** at https://daryllgomas.github.io/BreakTheCode/ — repo `DaryllGomas/BreakTheCode`, `main` publishes via GitHub Pages. Linked from daryllgomas.com (contact list, "book").
+**State:** LIVE and public at **https://breakthecode.daryllgomas.com/** (repo `DaryllGomas/BreakTheCode`, serves `main`, `CNAME` in main). Mirror still serves at https://breakthecode.meatball-labs.com/ from `Namkuzu-da-OS/BreakTheCode` branch `pages-meatball` (= main + one CNAME-swap commit). `daryllgomas.github.io/BreakTheCode/` 301s to the new domain. DNS: Namecheap CNAME `breakthecode` → `daryllgomas.github.io.`; HTTPS enforced. Linked from daryllgomas.com (home contact list, legacy.html, v2).
 
-**Moved 2026-09-27** out of the R&D repo (`Namkuzu-da-OS/BreakTheCode`, breakthecode.meatball-labs.com). The old 2025 personal-repo site is archived on branch `archive/v1-2025` + tag `v1-2025-06`, and bundled to Drive at `BigPic - Technology/Website/Backups/BreakTheCode-DaryllGomas-v1-2025-archive-2026-09-27/`.
+**Publish = `bash scripts/publish.sh`** from a clean `main`. It verifies content, then pushes both repos and rebuilds `pages-meatball`. Never hand-edit `CNAME` on main.
+
+**Moved 2026-09-27** out of R&D. The old 2025 personal-repo site is archived on branch `archive/v1-2025` + tag `v1-2025-06`, and bundled to Drive at `BigPic - Technology/Website/Backups/BreakTheCode-DaryllGomas-v1-2025-archive-2026-09-27/`.
 **Next session:** pick up at "Where to start" below.
 
 ---
