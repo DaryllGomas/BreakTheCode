@@ -93,7 +93,7 @@ export function renderPageChrome(activeSection = "") {
             <span><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17.4" cy="6.7" r=".7" class="social-links__fill"></circle></svg></span>
             <span><svg viewBox="0 0 24 24"><path d="M5 4.5 19 19.5M19 4.5 5 19.5"></path></svg></span>
           </div>
-          <p>A more conscious world<br>is possible.</p>
+          <p>A more conscious world<br>is possible.<br><a class="site-footer__author" href="https://daryllgomas.com/">by Daryll Gomas</a></p>
         </div>
       </div>`;
   }

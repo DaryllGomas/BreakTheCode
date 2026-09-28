@@ -10,7 +10,7 @@ This repo is mid-redesign. Before doing anything:
 
 Rules that override anything else:
 
-- Work on branch `redesign/temple`. Never commit to `main`.
+- The 2.0 build is finished and `main` is what publishes (GitHub Pages, `DaryllGomas/BreakTheCode`). Do new work on a feature branch and merge into `main` once `scripts/verify-content.mjs` passes.
 - **Build the site in the master image.** The old `index.html` is a *content and data reference only* — its appearance has zero authority. Do not preserve its CSS, layout, components, colours or hierarchy. Do not keep a component because rewriting it is work.
 - The displayed title is **"Breaking Your Genetic Code"** — the name of the book this site is built around. Both mockups show "BREAK THE CODE" in the wordmark; that is wrong and must be replaced everywhere. "Break the code" is supporting copy only.
 - Content is preserved in full: 6 chapters, 16 texts, all 28 quotes, every connection, 4 study paths. `node scripts/verify-content.mjs` must pass at every commit after packet 01. Where the mockup's placeholder words conflict with real content, the real content wins and the composition stays.

@@ -26,7 +26,7 @@ Final rasters are sRGB. Byte counts are the committed output sizes.
 | `library-06` | 800 × 1000 | 119,522 B | 228,452 B |
 | `library-07` | 800 × 1000 | 116,836 B | 234,068 B |
 | `library-08` | 800 × 1000 | 119,822 B | 198,889 B |
-| `library-09` | 800 × 1000 | 118,450 B | 199,187 B |
+| `library-09` | 800 × 1000 | 117,562 B | 193,352 B |
 | `library-10` | 800 × 1000 | 115,530 B | 204,629 B |
 | `library-12` | 800 × 1000 | 111,134 B | 142,635 B |
 | `library-13` | 800 × 1000 | 119,588 B | 188,304 B |
@@ -261,16 +261,16 @@ Constraints: culturally and materially accurate Greek papyrus manuscript; artifa
 ### `library-09.webp` and `library-09.jpg`
 
 ```text
-For this Living Library plate, section 6.2 overrides the architectural subject matter in the shared preamble: continuity with the reference comes ONLY from palette, warm off-frame lighting, intimate museum camera, fine dust, and near-black warm grade. Do not include Egyptian or Maya architecture, reliefs, hieroglyphs, glyphs, borders, ornaments, figures, symbols, or set dressing. Authentic historical writing intrinsic to the specified manuscript is required and is the sole exception to “no text or lettering”; do not add any caption, label, title, modern type, logo, UI, or watermark. The illumination comes from outside the frame: absolutely no visible flame, candle, lamp, brazier, bowl, pot, or light fixture.
+For this Living Library plate, section 6.2 overrides the architectural subject matter in the shared preamble: continuity with the reference comes ONLY from palette, warm off-frame amber raking light, intimate museum camera, fine dust, and near-black warm grade. Do not include Egyptian or Maya architecture, reliefs, hieroglyphs, glyphs, borders, ornaments, figures, symbols, or set dressing. Do not add any writing, caption, label, title, modern type, logo, UI, or watermark. The illumination comes from outside the frame: absolutely no visible flame, candle, lamp, brazier, bowl, pot, or light fixture.
 
 Use case: historical-scene
 Asset type: Living Library artefact card plate, portrait 4:5
 Input image: the supplied master mockup is the binding production style reference for palette, lighting, camera, depth, and grade only; it is not a source of cultural motifs.
-Primary request: The Cloud of Unknowing — one late-fourteenth-century medieval English vellum codex resting open on a plain dark stone shelf inside a shallow unadorned niche. The vellum pages carry a compact English Gothic hand in two columns and one plain rubricated red initial; worn undecorated brown leather binding is visible.
-Composition/framing: close frontal three-quarter museum study, codex centered and filling most of the portrait frame, shallow depth, no extra objects, lower edge slightly darker for adjoining card copy.
-Lighting/mood: restrained amber raking light from outside the frame; deep shadow, fine dust, near-black warm grade.
-Materials/textures: cockled vellum, iron-gall ink, restrained red pigment, scuffed leather, plain charcoal stone.
-Constraints: culturally and materially accurate medieval English devotional manuscript; sober and minimally decorated, not an illuminated luxury Bible. No visible light source. Absolutely no Egyptian or Maya motifs, architecture, hieroglyphs, glyphs, pyramids, columns, statuary, people, labels, modern objects, UI, or watermark.
+Primary request: The Cloud of Unknowing — one late-fourteenth-century medieval English devotional codex lying CLOSED on a plain dark stone shelf inside a shallow unadorned niche, turned at a slight three-quarter angle so the fore-edge of the stacked vellum leaves shows. Worn, undecorated dark-brown calf leather over wooden boards, blind-tooled simple fillet lines only, raised bands on the spine, two small worn brass clasps, scuffed corners. No visible writing on the cover. Sober and humble — a monastic working book, not a jewelled treasure binding.
+Composition/framing: codex centered, filling most of the portrait 4:5 frame, low camera so the cover plane and fore-edge both read, lower edge slightly darker for adjoining card copy. No visible light source, no extra objects, no text, labels, UI or watermark.
+Lighting/mood: restrained warm amber raking light from outside the frame; deep shadow, fine dust, near-black warm grade.
+Materials/textures: worn undecorated dark-brown calf leather over wooden boards, blind-tooled simple fillet lines only, stacked vellum fore-edge, raised spine bands, two small worn brass clasps, scuffed corners, plain charcoal stone.
+Constraints: culturally and materially accurate late-fourteenth-century medieval English devotional codex; sober and minimally decorated, not an illuminated luxury Bible or jewelled treasure binding. The book must remain fully closed. No visible writing anywhere. No visible light source. No extra objects. Absolutely no Egyptian or Maya motifs, architecture, hieroglyphs, glyphs, pyramids, columns, statuary, people, labels, modern objects, UI, or watermark.
 ```
 
 ### `library-10.webp` and `library-10.jpg`

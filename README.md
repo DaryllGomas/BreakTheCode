@@ -2,6 +2,8 @@
 
 Breaking Your Genetic Code is a static digital companion to the book of the same name. It brings six chapters, a 16-text Living Library, 28 sourced or honestly marked quotations, the Wisdom Web, four study paths, bookmarks, and private reflections into one accessible web experience.
 
+**Live:** https://daryllgomas.github.io/BreakTheCode/ — by [Daryll Gomas](https://daryllgomas.com/).
+
 The site has no framework, dependency install, or build step. It is plain HTML, CSS, JSON, and ES modules; Google Fonts is its only external request.
 
 ## Experience model

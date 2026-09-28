@@ -277,3 +277,19 @@ The *Emerald Tablet* is Hermetic, but the surviving textual history is **Arabic-
 ## Bottom line
 
 The strongest problems are not marginal punctuation disputes. Eleven catalog items are either modern paraphrases/misattributions or altered composites; the twelfth (Tolle) fails only because a word was dropped from the named edition. The Tao, Marcus Aurelius, Rumi, Emerson, Huxley, and Egyptian-adjacent claims are the main credibility risks. Conversely, the two Byrom lines are genuinely present in a named *Dhammapada* edition but need the recorded warning that Byrom is unusually free. The metadata now exposes those distinctions instead of laundering all 28 lines into equally ancient, equally literal quotations.
+
+---
+
+## Addendum 2026-09-27 — the last five paraphrases replaced
+
+Owner approved replacing the five remaining paraphrase-marked quotes with verified same-idea lines from the same author. All wording confirmed word-for-word against primary texts online. Catalogue now: **28 of 28 verified.**
+
+| Item | Replacement | Source | Confirmed at |
+|---|---|---|---|
+| taoTeChing:1 | “The partial becomes complete; the crooked, straight; the empty, full; the worn out, new.” | Legge 1891, ch. 22 | [Gutenberg #216](https://www.gutenberg.org/cache/epub/216/pg216.txt), [Wikisource](https://en.wikisource.org/wiki/T%C3%A2o_Teh_King) |
+| rumi:0 | “My wings have grown out of my very essence: I do not stick two wings on with glue.” | Nicholson 1926, Masnavi II.3564 | [masnavi.net](https://masnavi.net/3/25/eng/2/3555/), [1926 scan](https://archive.org/details/in.ernet.dli.2015.70297) |
+| rumi:1 | “O kings, we have slain the outward enemy, (but) there remains within (us) a worse enemy than he.” | Nicholson 1926, Masnavi I.1373 (brackets his) | [masnavi.net](https://masnavi.net/3/25/eng/1/1360/), same scan |
+| emerson:0 | “Within man is the soul of the whole; … the eternal ONE.” (leading “Meantime” omitted) | “The Over-Soul,” Essays: First Series, 1841 | [Gutenberg #2944](https://www.gutenberg.org/cache/epub/2944/pg2944.txt), [Emerson Central](https://emersoncentral.com/texts/essays-first-series/the-over-soul/) |
+| huxley:0 | “The man who comes back through the Door in the Wall will never be quite the same as the man who went out.” (leading “But” omitted) | The Doors of Perception, 1954, closing paragraph | [archive.org](https://archive.org/details/aldous-huxley-the-doors-of-perception_202201) |
+
+**Correction to §8 above:** the “bird, your soul … cage” passage is Masnavi **Book I**.1540–1541, not Book III (the masnavi.net path `/3/25/eng/1/…` is Book 1). Huxley page number not given: the 1954 scans on archive.org are lending-only.

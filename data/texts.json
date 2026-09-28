@@ -64,12 +64,12 @@
         }
       },
       {
-        "text": "When I let go of what I am, I become what I might be.",
+        "text": "The partial becomes complete; the crooked, straight; the empty, full; the worn out, new.",
         "context": "Breaking your genetic code requires releasing fixed identity.",
         "source": {
-          "translator_or_edition": "John Heider, The Tao of Leadership (Humanics, 1985), section 22, p. 43",
-          "note": "Not a Tao Te Ching line. The exact English sentence is John Heider’s modern leadership adaptation, “The Paradox of Letting Go.” Suggested replacement: James Legge, Tao Te Ching 22, “The partial becomes complete; the crooked, straight.”",
-          "verified": false
+          "translator_or_edition": "James Legge, trans., The Tâo Teh King, in The Texts of Tâoism, Sacred Books of the East vol. 39 (Oxford, 1891)",
+          "note": "Chapter 22. Replaces “When I let go of what I am, I become what I might be,” which is John Heider’s modern adaptation (The Tao of Leadership, 1985), not a line of the Tao Te Ching; same idea, sourced wording.",
+          "verified": true
         }
       },
       {
@@ -253,21 +253,21 @@
     ],
     "quotes": [
       {
-        "text": "You were born with wings, why prefer to crawl through life?",
+        "text": "My wings have grown out of my very essence: I do not stick two wings on with glue.",
         "context": "We have capacities far beyond our genetic programming - awakening activates them.",
         "source": {
-          "translator_or_edition": "Untraceable modern attribution; earliest located print citation is Larry Chang, Wisdom for the Soul (2006), p. 26",
-          "note": "No Persian original, poem number, or named translation was located; this is not verified Rumi. Suggested replacement from R. A. Nicholson’s Masnavi III.1540–1541: “the bird, your soul, will be distressed in its cage” and seeks escape.",
-          "verified": false
+          "translator_or_edition": "R. A. Nicholson, trans., The Mathnawí of Jalálu'ddín Rúmí, Vol. II: Translation of the First & Second Books (E. J. W. Gibb Memorial, New Series IV, 1926)",
+          "note": "Masnavi II.3564. Replaces “You were born with wings, why prefer to crawl through life?”, an untraceable modern attribution (earliest print 2006) carrying the same idea.",
+          "verified": true
         }
       },
       {
-        "text": "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.",
+        "text": "O kings, we have slain the outward enemy, (but) there remains within (us) a worse enemy than he.",
         "context": "Personal transformation is the key to collective evolution.",
         "source": {
-          "translator_or_edition": "Untraceable modern attribution; no Persian source or named translation located",
-          "note": "Not found in Rumi’s Persian corpus or major named English editions, including Coleman Barks anthologies. Online Persian versions are back-translations of the English. No same-text replacement is offered because none could be securely matched to this wording.",
-          "verified": false
+          "translator_or_edition": "R. A. Nicholson, trans., The Mathnawí of Jalálu'ddín Rúmí, Vol. II: Translation of the First & Second Books (E. J. W. Gibb Memorial, New Series IV, 1926)",
+          "note": "Masnavi I.1373, on the Tradition “We have returned from the lesser Jihád to the greater Jihád.” The brackets are Nicholson’s. Replaces “Yesterday I was clever, so I wanted to change the world…”, an untraceable modern attribution carrying the same idea.",
+          "verified": true
         }
       }
     ]
@@ -343,12 +343,12 @@
     ],
     "quotes": [
       {
-        "text": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+        "text": "Within man is the soul of the whole; the wise silence; the universal beauty, to which every part and particle is equally related; the eternal ONE.",
         "context": "The power to break free exists within - not in external circumstances.",
         "source": {
-          "translator_or_edition": "Henry Stanley Haskins, Meditations in Wall Street (William Morrow, 1940), originally anonymous",
-          "note": "Not Emerson. The sentence is documented in Haskins’s 1940 book and was later attached to Emerson. It postdates Emerson’s death by 58 years.",
-          "verified": false
+          "translator_or_edition": "Ralph Waldo Emerson, “The Over-Soul,” Essays: First Series (Boston: James Munroe, 1841)",
+          "note": "Opening word “Meantime” omitted and “Within” capitalised for display; otherwise exact. Replaces “What lies behind us and what lies before us…”, which is Henry Stanley Haskins (Meditations in Wall Street, 1940), not Emerson.",
+          "verified": true
         }
       },
       {
@@ -400,12 +400,12 @@
     ],
     "quotes": [
       {
-        "text": "There are things known and there are things unknown, and in between are the doors of perception.",
+        "text": "The man who comes back through the Door in the Wall will never be quite the same as the man who went out.",
         "context": "Expanding consciousness opens doors to realities beyond ordinary perception.",
         "source": {
-          "translator_or_edition": "No matching Huxley edition; compare Aldous Huxley, The Doors of Perception (Chatto & Windus, 1954)",
-          "note": "Not found in Huxley. The wording developed from Ray Manzarek’s 1967 explanation of the band name: known and unknown things, with “the doors” between. Suggested replacement: Blake’s genuine plate 14 line already catalogued in this library.",
-          "verified": false
+          "translator_or_edition": "Aldous Huxley, The Doors of Perception (London: Chatto & Windus; New York: Harper & Brothers, 1954)",
+          "note": "Closing paragraph. Opening “But” omitted and “The” capitalised for display; otherwise exact. Replaces “There are things known and there are things unknown…”, which is Ray Manzarek (1967) explaining the name of The Doors, not Huxley.",
+          "verified": true
         }
       }
     ]

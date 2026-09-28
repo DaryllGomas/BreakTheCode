@@ -1402,6 +1402,19 @@ body.nav-open .site-header {
   text-transform: uppercase;
 }
 
+.site-footer__author {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer__author:hover,
+.site-footer__author:focus-visible {
+  color: var(--gold-lit);
+}
+
 .social-links {
   display: flex;
   gap: 0.65rem;

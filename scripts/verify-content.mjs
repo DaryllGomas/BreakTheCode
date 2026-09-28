@@ -188,6 +188,28 @@ const APPROVED_QUOTE_CORRECTIONS = {
   'tolle:0': {
     from: 'Realize deeply that the present moment is all you have. Make the NOW the primary focus of your life.',
     to: 'Realize deeply that the present moment is all you ever have. Make the NOW the primary focus of your life.'
+  },
+  // Second round, approved by the owner 2026-09-27: the last five paraphrase-marked
+  // quotes replaced with verified same-idea lines from the same author.
+  'taoTeChing:1': {
+    from: 'When I let go of what I am, I become what I might be.',
+    to: 'The partial becomes complete; the crooked, straight; the empty, full; the worn out, new.'
+  },
+  'rumi:0': {
+    from: 'You were born with wings, why prefer to crawl through life?',
+    to: 'My wings have grown out of my very essence: I do not stick two wings on with glue.'
+  },
+  'rumi:1': {
+    from: 'Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.',
+    to: 'O kings, we have slain the outward enemy, (but) there remains within (us) a worse enemy than he.'
+  },
+  'emerson:0': {
+    from: 'What lies behind us and what lies before us are tiny matters compared to what lies within us.',
+    to: 'Within man is the soul of the whole; the wise silence; the universal beauty, to which every part and particle is equally related; the eternal ONE.'
+  },
+  'huxley:0': {
+    from: 'There are things known and there are things unknown, and in between are the doors of perception.',
+    to: 'The man who comes back through the Door in the Wall will never be quite the same as the man who went out.'
   }
 };
 const appliedCorrections = [];
